@@ -58,9 +58,9 @@ newRamenForm.addEventListener('submit', async(e) => {
 
     renederRamen(newRamenArr)
 
-    let postReq = await fetch('http://localhost:3000/ramens', {
+    fetch('http://localhost:3000/ramens/', {
         method: 'POST',
-        headers: {'content-tpye': 'application/json', 'Accept':'application/json'},
+        headers: {'content-type': 'application/json'},
         body: JSON.stringify({
             name: newRamenObj.name,
             restaurant: newRamenObj.restaurant,
